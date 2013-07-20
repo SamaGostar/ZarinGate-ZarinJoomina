@@ -7,7 +7,7 @@
     $amount=$some*$amount;
 	$callBackUrl = $_POST['TransactionRedirectUrl']."?option=com_zarinjoomina&amount=".$amount."&des=".$_POST['TransactionDesc']."&merchantID=".$merchantID;
 
-	$client = new nusoap_client('https://www.zarinpal.com/pg/services/WebGate/wsdl', 'wsdl');
+	$client = new nusoap_client('https://de.zarinpal.com/pg/services/WebGate/wsdl', 'wsdl');
 	$res = $client->call('PaymentRequest', 
 	array(
 					'MerchantID' 	=> $merchantID ,
